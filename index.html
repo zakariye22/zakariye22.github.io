@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zakariye Mohamed | Journalist</title>
+
+  <meta
+    name="description"
+    content="Zakariye Mohamed – journalist, frilansjournalist og spaltist i Oslo."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f8f5;
+      color: #151515;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    /* Navigasjon */
+
+    header {
+      border-bottom: 1px solid #d8d8d3;
+      background: #f8f8f5;
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Forside */
+
+    .hero {
+      padding: 120px 0 110px;
+      border-bottom: 1px solid #d8d8d3;
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.95;
+      font-weight: normal;
+      max-width: 850px;
+    }
+
+    .hero-text {
+      max-width: 680px;
+      font-size: 1.25rem;
+      margin-top: 36px;
+      color: #3d3d3a;
+    }
+
+    /* Generelt */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      border-bottom: 1px solid #222;
+      padding-bottom: 14px;
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.4rem;
+      font-weight: normal;
+    }
+
+    .section-number {
+      font-size: 0.8rem;
+    }
+
+    /* Artikler */
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border-top: 1px solid #d8d8d3;
+    }
+
+    .article {
+      padding: 35px 30px 35px 0;
+      border-bottom: 1px solid #d8d8d3;
+    }
+
+    .article:nth-child(even) {
+      padding-left: 30px;
+      border-left: 1px solid #d8d8d3;
+    }
+
+    .publication {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      color: #666;
+    }
+
+    .article h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .article p {
+      color: #555;
+      max-width: 470px;
+    }
+
+    /* Om meg */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+    }
+
+    .about-intro {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.7rem;
+      line-height: 1.4;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      max-width: 650px;
+      font-size: 1.05rem;
+    }
+
+    /* Kontakt */
+
+    .contact {
+      background: #171717;
+      color: white;
+    }
+
+    .contact h2 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      max-width: 800px;
+      line-height: 1.05;
+      margin-bottom: 45px;
+    }
+
+    .contact a {
+      display: inline-block;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+      padding-bottom: 4px;
+    }
+
+    footer {
+      background: #171717;
+      color: #aaa;
+      padding: 30px 0;
+      border-top: 1px solid #333;
+      font-size: 0.85rem;
+    }
+
+    /* Mobil */
+
+    @media (max-width: 700px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px 0;
+      }
+
+      .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+
+      .articles {
+        grid-template-columns: 1fr;
+      }
+
+      .article,
+      .article:nth-child(even) {
+        padding: 30px 0;
+        border-left: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#">Zakariye Mohamed</a>
+
+        <ul class="nav-links">
+          <li><a href="#artikler">Artikler</a></li>
+          <li><a href="#om">Om meg</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <p class="hero-label">Journalist · Frilansjournalist · Spaltist</p>
+
+        <h1>Zakariye Mohamed</h1>
+
+        <p class="hero-text">
+          Jeg skriver om politikk, samfunn, utenriks- og sikkerhetspolitikk,
+          mennesker og konfliktene som former tiden vi lever i.
+        </p>
+      </div>
+    </section>
+
+
+    <section id="artikler">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Utvalgte tekster</h2>
+          <span class="section-number">01</span>
+        </div>
+
+        <div class="articles">
+
+          <article class="article">
+            <p class="publication">Aftenposten</p>
+            <h3>Publisert i Aftenposten</h3>
+            <p>
+              Kommentar og samfunnsdebatt.
+            </p>
+          </article>
+
+          <article class="article">
+            <p class="publication">Altinget</p>
+            <h3>Publisert i Altinget</h3>
+            <p>
+              Politikk og samfunn.
+            </p>
+          </article>
+
+          <article class="article">
+            <p class="publication">Samtiden</p>
+            <h3>Publisert i Samtiden</h3>
+            <p>
+              Analyse, idédebatt og samfunn.
+            </p>
+          </article>
+
+          <article class="article">
+            <p class="publication">Subjekt</p>
+            <h3>Publisert i Subjekt</h3>
+            <p>
+              Kommentar og kulturdebatt.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="om">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Om meg</h2>
+          <span class="section-number">02</span>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-intro">
+            Journalist med særlig interesse for politikk, samfunn og internasjonale spørsmål.
+          </div>
+
+          <div class="about-text">
+            <p>
+              Jeg heter Zakariye Mohamed og studerer journalistikk i Oslo.
+              Ved siden av studiene arbeider jeg med frilansjournalistikk,
+              kommentarer og spalter.
+            </p>
+
+            <p>
+              Jeg er særlig interessert i utenriks- og sikkerhetspolitikk,
+              demokrati, ytringsfrihet, integrering og samfunnsutvikling.
+            </p>
+
+            <p>
+              Tekstene mine har blant annet vært publisert i Aftenposten,
+              Altinget, Samtiden og Subjekt.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact" id="kontakt">
+      <div class="container">
+
+        <p class="hero-label">Kontakt</p>
+
+        <h2>
+          Tips, oppdrag eller lyst til å samarbeide?
+        </h2>
+
+        <a href="mailto:din-epost@eksempel.no">
+          din-epost@eksempel.no
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container">
+      © 2026 Zakariye Mohamed
+    </div>
+  </footer>
+
+</body>
+</html>
