@@ -38,11 +38,12 @@
       margin: 0 auto;
     }
 
-    /* Navigasjon */
-
     header {
       border-bottom: 1px solid #d8d8d3;
       background: #f8f8f5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav {
@@ -75,8 +76,6 @@
       text-decoration: underline;
     }
 
-    /* Forside */
-
     .hero {
       padding: 120px 0 110px;
       border-bottom: 1px solid #d8d8d3;
@@ -94,17 +93,15 @@
       font-size: clamp(3rem, 8vw, 6.5rem);
       line-height: 0.95;
       font-weight: normal;
-      max-width: 850px;
+      max-width: 900px;
     }
 
     .hero-text {
-      max-width: 680px;
+      max-width: 720px;
       font-size: 1.25rem;
       margin-top: 36px;
       color: #3d3d3a;
     }
-
-    /* Generelt */
 
     section {
       padding: 90px 0;
@@ -134,17 +131,16 @@
     .articles {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 0;
       border-top: 1px solid #d8d8d3;
     }
 
     .article {
-      padding: 35px 30px 35px 0;
+      padding: 38px 35px 38px 0;
       border-bottom: 1px solid #d8d8d3;
     }
 
     .article:nth-child(even) {
-      padding-left: 30px;
+      padding-left: 35px;
       border-left: 1px solid #d8d8d3;
     }
 
@@ -152,20 +148,71 @@
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
       color: #666;
     }
 
     .article h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.65rem;
+      line-height: 1.25;
       font-weight: normal;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
     .article p {
       color: #555;
-      max-width: 470px;
+      max-width: 480px;
+    }
+
+    .article-link {
+      margin-top: 22px;
+    }
+
+    .article-link a {
+      color: #151515;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid #151515;
+      padding-bottom: 3px;
+    }
+
+    .article-link a:hover {
+      opacity: 0.55;
+    }
+
+    /* Arbeid */
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .work-card {
+      border: 1px solid #d8d8d3;
+      padding: 35px;
+      min-height: 290px;
+    }
+
+    .work-type {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .work-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .work-card p {
+      color: #444;
+      margin-bottom: 15px;
     }
 
     /* Om meg */
@@ -184,7 +231,7 @@
 
     .about-text p {
       margin-bottom: 20px;
-      max-width: 650px;
+      max-width: 680px;
       font-size: 1.05rem;
     }
 
@@ -197,7 +244,7 @@
 
     .contact h2 {
       font-size: clamp(2.5rem, 7vw, 5rem);
-      max-width: 800px;
+      max-width: 850px;
       line-height: 1.05;
       margin-bottom: 45px;
     }
@@ -210,6 +257,10 @@
       padding-bottom: 4px;
     }
 
+    .contact a:hover {
+      opacity: 0.7;
+    }
+
     footer {
       background: #171717;
       color: #aaa;
@@ -217,8 +268,6 @@
       border-top: 1px solid #333;
       font-size: 0.85rem;
     }
-
-    /* Mobil */
 
     @media (max-width: 700px) {
       nav {
@@ -246,6 +295,10 @@
         border-left: none;
       }
 
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
       .about-grid {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -254,27 +307,37 @@
   </style>
 </head>
 
+
 <body>
 
   <header>
     <div class="container">
       <nav>
+
         <a class="logo" href="#">Zakariye Mohamed</a>
 
         <ul class="nav-links">
           <li><a href="#artikler">Artikler</a></li>
+          <li><a href="#arbeid">Arbeid</a></li>
           <li><a href="#om">Om meg</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
+
       </nav>
     </div>
   </header>
 
+
   <main>
+
+    <!-- FORSIDE -->
 
     <section class="hero">
       <div class="container">
-        <p class="hero-label">Journalist · Frilansjournalist · Spaltist</p>
+
+        <p class="hero-label">
+          Journalist · Frilansjournalist · Spaltist
+        </p>
 
         <h1>Zakariye Mohamed</h1>
 
@@ -282,9 +345,12 @@
           Jeg skriver om politikk, samfunn, utenriks- og sikkerhetspolitikk,
           mennesker og konfliktene som former tiden vi lever i.
         </p>
+
       </div>
     </section>
 
+
+    <!-- ARTIKLER -->
 
     <section id="artikler">
       <div class="container">
@@ -294,38 +360,107 @@
           <span class="section-number">01</span>
         </div>
 
+
         <div class="articles">
 
           <article class="article">
-            <p class="publication">Aftenposten</p>
-            <h3>Publisert i Aftenposten</h3>
-            <p>
-              Kommentar og samfunnsdebatt.
+
+            <p class="publication">
+              Aftenposten · 14. februar 2026
             </p>
+
+            <h3>
+              Jeg sluttet å ta innvandringsdebatten personlig
+            </h3>
+
+            <p>
+              Et personlig innlegg om innvandringsdebatten, identitet og
+              følelsen av å bli holdt ansvarlig for handlingene til andre
+              mennesker med samme bakgrunn.
+            </p>
+
+            <p class="article-link">
+              <a href="AFTENPOSTEN-LENKE" target="_blank" rel="noopener">
+                Les i Aftenposten →
+              </a>
+            </p>
+
           </article>
 
-          <article class="article">
-            <p class="publication">Altinget</p>
-            <h3>Publisert i Altinget</h3>
-            <p>
-              Politikk og samfunn.
-            </p>
-          </article>
 
           <article class="article">
-            <p class="publication">Samtiden</p>
-            <h3>Publisert i Samtiden</h3>
-            <p>
-              Analyse, idédebatt og samfunn.
+
+            <p class="publication">
+              Altinget · 9. april 2026
             </p>
+
+            <h3>
+              Vi må stå opp for våre egne verdier, også når vår viktigste
+              allierte beveger seg bort fra dem
+            </h3>
+
+            <p>
+              Om folkeretten, stormaktspolitikk og hvorfor Norge som en liten
+              stat har en egeninteresse i å forsvare en regelstyrt
+              internasjonal orden.
+            </p>
+
+            <p class="article-link">
+              <a href="ALTINGET-LENKE" target="_blank" rel="noopener">
+                Les i Altinget →
+              </a>
+            </p>
+
           </article>
 
+
           <article class="article">
-            <p class="publication">Subjekt</p>
-            <h3>Publisert i Subjekt</h3>
-            <p>
-              Kommentar og kulturdebatt.
+
+            <p class="publication">
+              Samtiden · 19. april 2026
             </p>
+
+            <h3>
+              Manosfæren som motreaksjon
+            </h3>
+
+            <p>
+              En kommentar om manosfæren, Andrew Tate, algoritmer og hvordan
+              frustrasjon, kulturkamp og bitterhet har blitt til et
+              lønnsomt digitalt marked.
+            </p>
+
+            <p class="article-link">
+              <a href="SAMTIDEN-LENKE" target="_blank" rel="noopener">
+                Les i Samtiden →
+              </a>
+            </p>
+
+          </article>
+
+
+          <article class="article">
+
+            <p class="publication">
+              Subjekt · 5. juni 2026
+            </p>
+
+            <h3>
+              Nihilismen banker på døren. Det må vi ta på alvor
+            </h3>
+
+            <p>
+              Om nihilisme og en digital kultur der empati kan fremstilles
+              som svakhet, mens penger, dominans og forakt blir fremstilt
+              som tegn på styrke.
+            </p>
+
+            <p class="article-link">
+              <a href="SUBJEKT-LENKE" target="_blank" rel="noopener">
+                Les i Subjekt →
+              </a>
+            </p>
+
           </article>
 
         </div>
@@ -333,25 +468,92 @@
     </section>
 
 
+    <!-- ARBEID -->
+
+    <section id="arbeid">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Arbeid</h2>
+          <span class="section-number">02</span>
+        </div>
+
+
+        <div class="work-grid">
+
+          <div class="work-card">
+
+            <p class="work-type">
+              Frilansjournalist
+            </p>
+
+            <h3>Utrop</h3>
+
+            <p>
+              Jeg arbeider som frilansjournalist for Utrop på
+              sak-for-sak-basis.
+            </p>
+
+            <p>
+              Utrop er en uavhengig og ikke-partipolitisk flerkulturell avis
+              som dekker nyheter, aktualiteter og debatt om det
+              flerkulturelle Norge.
+            </p>
+
+          </div>
+
+
+          <div class="work-card">
+
+            <p class="work-type">
+              Spaltist
+            </p>
+
+            <h3>Ung debatt</h3>
+
+            <p>
+              Jeg er spaltist i Ung debatts spaltistprogram og skriver
+              jevnlig kommentarer og meningsstoff.
+            </p>
+
+            <p>
+              Ung debatt arbeider med å få flere unge stemmer inn i den
+              offentlige debatten. De hjelper unge skribenter med å utvikle
+              tekster og få dem publisert i redaktørstyrte medier.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- OM MEG -->
+
     <section id="om">
       <div class="container">
 
         <div class="section-heading">
           <h2>Om meg</h2>
-          <span class="section-number">02</span>
+          <span class="section-number">03</span>
         </div>
+
 
         <div class="about-grid">
 
           <div class="about-intro">
-            Journalist med særlig interesse for politikk, samfunn og internasjonale spørsmål.
+            Journalist med særlig interesse for politikk, samfunn og
+            internasjonale spørsmål.
           </div>
 
+
           <div class="about-text">
+
             <p>
               Jeg heter Zakariye Mohamed og studerer journalistikk i Oslo.
-              Ved siden av studiene arbeider jeg med frilansjournalistikk,
-              kommentarer og spalter.
+              Ved siden av studiene arbeider jeg som frilansjournalist for
+              Utrop og som spaltist for Ung debatt.
             </p>
 
             <p>
@@ -360,9 +562,11 @@
             </p>
 
             <p>
-              Tekstene mine har blant annet vært publisert i Aftenposten,
-              Altinget, Samtiden og Subjekt.
+              Jeg skriver både journalistikk og meningsstoff. Tekstene mine
+              har blant annet vært publisert i Aftenposten, Altinget,
+              Samtiden og Subjekt.
             </p>
+
           </div>
 
         </div>
@@ -370,17 +574,21 @@
     </section>
 
 
+    <!-- KONTAKT -->
+
     <section class="contact" id="kontakt">
       <div class="container">
 
-        <p class="hero-label">Kontakt</p>
+        <p class="hero-label">
+          Kontakt
+        </p>
 
         <h2>
           Tips, oppdrag eller lyst til å samarbeide?
         </h2>
 
-        <a href="mailto:din-epost@eksempel.no">
-          din-epost@eksempel.no
+        <a href="mailto:Zakariyee.mohamed@outlook.com">
+          Zakariyee.mohamed@outlook.com
         </a>
 
       </div>
